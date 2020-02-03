@@ -43,6 +43,11 @@ class _SignUpFormState extends State<SignUpForm>
    super.initState();
  }
 
+void _showWelcomeScreen() {
+   Navigator.of(context)
+       .push(MaterialPageRoute(builder: (context) => WelcomeScreen()));
+}
+
 
  @override
  Widget build(BuildContext context) {
@@ -64,7 +69,7 @@ class _SignUpFormState extends State<SignUpForm>
            textColor: Colors.white,
            // STEP 1: Add a callback here and navigate to
            // the welcome screen when the button is tapped.
-           onPressed: null,
+           onPressed: _showWelcomeScreen,
            child: Text('Sign up'),
          ),
        ),
